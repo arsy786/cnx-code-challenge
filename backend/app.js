@@ -1,20 +1,29 @@
-import dotenv from "dotenv";
+import cors from "cors";
 import express from "express";
+import promMiddleware from "express-prometheus-middleware";
+import { authMiddleware } from "./middleware/auth.js";
+import { errorMiddleware } from "./middleware/error.js";
 import router from "./routes/route.js";
 
-dotenv.config();
+// create express app
 const app = express();
 
-// Middleware
+// middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(cors({ origin: true }));
+app.use(authMiddleware);
+app.use(
+	promMiddleware({
+		metricsPath: "/metrics",
+		collectDefaultMetrics: true,
+		requestDurationBuckets: [0.1, 0.5, 1, 1.5],
+	})
+);
 
-// Root route. It is used to check if the server is running.
-app.get("/", (req, res) => {
-	res.status(200).json({ alive: "true" });
-});
+// router
+app.use("/", router);
 
-// Routing
-app.use("/api/v1", router);
+// global error handling
+app.use(errorMiddleware);
 
 export default app;
