@@ -1,7 +1,7 @@
-const eslint = require("@eslint/js");
-const jest = require("eslint-plugin-jest");
+import eslint from "@eslint/js";
+import jest from "eslint-plugin-jest";
 
-module.exports = [
+export default [
 	eslint.configs.recommended,
 
 	// jest specific rules
@@ -20,7 +20,7 @@ module.exports = [
 	{
 		languageOptions: {
 			ecmaVersion: "latest",
-			sourceType: "commonjs",
+			sourceType: "module",
 			globals: {
 				console: "readonly",
 			},
