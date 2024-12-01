@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { formatTimeDifference } from "../../utils/formatTime";
 import "./styles.css";
 
 interface TimeDifferenceDisplayProps {
@@ -13,19 +14,9 @@ const TimeDifferenceDisplay: React.FC<TimeDifferenceDisplayProps> = ({
 	useEffect(() => {
 		const intervalId = setInterval(() => {
 			const clientTime = Date.now() / 1000;
-			const differenceInSeconds = Math.abs(clientTime - serverTime);
-
-			const hours = Math.floor(differenceInSeconds / 3600)
-				.toString()
-				.padStart(2, "0");
-			const minutes = Math.floor((differenceInSeconds % 3600) / 60)
-				.toString()
-				.padStart(2, "0");
-			const seconds = Math.floor(differenceInSeconds % 60)
-				.toString()
-				.padStart(2, "0");
-
-			setTimeDifference(`${hours}:${minutes}:${seconds}`);
+			const difference = Math.abs(clientTime - serverTime);
+			const formattedDifference = formatTimeDifference(difference);
+			setTimeDifference(formattedDifference);
 		}, 1000);
 
 		return () => clearInterval(intervalId);

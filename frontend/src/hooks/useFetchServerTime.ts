@@ -29,16 +29,14 @@ export const useFetchServerTime = (url: string, options?: RequestInit) => {
 	};
 
 	useEffect(() => {
-		fetchData(); // Initial fetch
+		fetchData();
 
-		// Set up the interval to fetch data every 30 seconds
 		const intervalId = setInterval(fetchData, 30000);
 
-		// Clean up the interval on component unmount
 		return () => clearInterval(intervalId);
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []); // Only re-run if url or options change
+	}, []);
 
 	return { data, loading, error };
 };

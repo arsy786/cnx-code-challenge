@@ -25,15 +25,14 @@ export const useFetchMetrics = (url: string, options?: RequestInit) => {
 	};
 
 	useEffect(() => {
-		fetchMetrics(); // Initial fetch
+		fetchMetrics();
 
-		// Set up the interval to fetch metrics data every 30 seconds
 		const intervalId = setInterval(fetchMetrics, 30000);
 
-		// Clean up the interval on component unmount
 		return () => clearInterval(intervalId);
+
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []); // Re-run if url or options change
+	}, []);
 
 	return { data, loading, error };
 };
