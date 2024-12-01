@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import "./styles.css";
 
 interface TimeDifferenceDisplayProps {
 	serverTime: number;
@@ -31,9 +32,13 @@ const TimeDifferenceDisplay: React.FC<TimeDifferenceDisplayProps> = ({
 	}, [serverTime]);
 
 	return (
-		<div>
-			<h2>Time Difference</h2>
-			<p>Time difference: {timeDifference}</p>
+		<div className="display-container">
+			<h2 className="display-title">Time Difference</h2>
+			<p className="time-display-content">
+				<span>(stopwatch format)</span>
+				<br />
+				<span className="time-difference-highlight"> {timeDifference}</span>
+			</p>
 		</div>
 	);
 };

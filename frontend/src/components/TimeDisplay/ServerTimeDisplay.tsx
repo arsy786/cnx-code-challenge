@@ -1,4 +1,4 @@
-import React from "react";
+import "./styles.css";
 
 interface ServerTimeDisplayProps {
 	data: {
@@ -8,9 +8,13 @@ interface ServerTimeDisplayProps {
 
 const ServerTimeDisplay: React.FC<ServerTimeDisplayProps> = ({ data }) => {
 	return (
-		<div>
-			<h1>Server Time</h1>
-			<p>Server time (epoch seconds): {data.epoch}</p>
+		<div className="display-container">
+			<h1 className="display-title">Server Time</h1>
+			<p className="time-display-content">
+				<span>(epoch seconds)</span>
+				<br />
+				<span className="time-difference-highlight">{data.epoch}</span>
+			</p>
 		</div>
 	);
 };

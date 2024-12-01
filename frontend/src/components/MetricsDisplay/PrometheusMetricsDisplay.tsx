@@ -1,3 +1,5 @@
+import "./styles.css";
+
 interface PrometheusMetricsDisplayProps {
 	metrics: string;
 }
@@ -6,9 +8,9 @@ const PrometheusMetricsDisplay: React.FC<PrometheusMetricsDisplayProps> = ({
 	metrics,
 }) => {
 	return (
-		<div>
-			<h1>Prometheus Metrics</h1>
-			<pre>{metrics}</pre>
+		<div className="display-container">
+			<h1 className="display-title">Prometheus Metrics</h1>
+			<pre className="metrics-pre-container">{metrics}</pre>
 		</div>
 	);
 };

@@ -1,0 +1,7 @@
+.time-display-content {
+	@apply text-lg;
+}
+
+.time-difference-highlight {
+	@apply font-mono text-blue-600 font-bold;
+}
