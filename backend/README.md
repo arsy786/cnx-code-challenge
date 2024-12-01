@@ -2,7 +2,11 @@
 
 This README is specifically for backend-related tasks. For instructions on running the full-stack application, please refer to the main project `README.md` in the root directory.
 
-## Start the Server
+## Scripts
+
+Below are the available scripts for the backend. Run these commands from the backend directory:
+
+### Start the Server
 
 Start the server in production mode:
 
@@ -10,7 +14,9 @@ Start the server in production mode:
 npm run start
 ```
 
-## Development mode
+This will start the server at `http://localhost:3000` (or another port if configured).
+
+### Development mode
 
 Start the server with automatic restarts on file changes using `nodemon`:
 
@@ -18,7 +24,7 @@ Start the server with automatic restarts on file changes using `nodemon`:
 npm run dev
 ```
 
-## Linting
+### Linting
 
 Linting helps enforce consistent code style and identify potential issues.
 
@@ -34,7 +40,7 @@ To automatically fix fixable issues:
 npm run lint:fix
 ```
 
-## Testing
+### Testing
 
 This project uses Jest for testing.
 
