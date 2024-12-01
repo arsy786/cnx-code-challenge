@@ -14,7 +14,9 @@ app.get("/", (req, res) => {
 });
 
 // Start the server
+// eslint-disable-next-line no-undef
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
+	// eslint-disable-next-line no-console
 	console.log(`Server listening on port ${port}`);
 });
