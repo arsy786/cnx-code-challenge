@@ -8,7 +8,7 @@ import router from "./routes/route.js";
 // create express app
 const app = express();
 
-// middleware
+// configure middleware
 app.use(express.json());
 app.use(cors({ origin: true }));
 app.use(authMiddleware);
