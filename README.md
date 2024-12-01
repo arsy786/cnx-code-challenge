@@ -40,7 +40,7 @@ This project is divided into two main parts: the backend and the frontend. Follo
    npm install
    ```
 
-3. Create a .env file in the backend directory and add the following:
+3. Create a `.env` file in the backend directory and add the following:
 
    ```env
    PORT=3000
