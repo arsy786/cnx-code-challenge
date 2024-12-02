@@ -14,7 +14,7 @@ Start the server in production mode:
 npm run start
 ```
 
-This will start the server at `http://localhost:3000` (or another port if configured).
+This will start the server at `http://localhost:3000` (or another port if configured)
 
 ### Development mode
 

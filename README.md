@@ -53,7 +53,7 @@ This project is divided into two main parts: the backend and the frontend. Follo
    npm run dev
    ```
 
-   The backend should now be running on `http://localhost:3000`.
+   The backend should now be running on `http://localhost:3000`
 
 ### Setting up the Client
 
@@ -77,7 +77,7 @@ This project is divided into two main parts: the backend and the frontend. Follo
    npm run dev
    ```
 
-   The frontend should now be running on `http://localhost:3001`.
+   The frontend should now be running on `http://localhost:3001`
 
 ### Accessing the Application
 
