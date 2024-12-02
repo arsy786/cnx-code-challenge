@@ -1,6 +1,6 @@
-# LOREM IPSUM App
+# Server Monitoring Dashboard App
 
-This is a simple LOREM IPSUM app designed for managing LOREM IPSUM with ease. The app uses Express and Node.js for server-side functionality, and React.js for a dynamic front-end user experience.
+This is a server monitoring app designed to provide crucial insights into server performance and response metrics. The app uses Express.js and Node.js for server-side functionality, and React.js for a dynamic front-end user experience.
 
 ## Getting Started
 
@@ -8,6 +8,7 @@ This project is divided into two main parts: the backend and the frontend. Follo
 
 ### Prerequisites
 
+- Git
 - Node.js
 
 ### Cloning the Repo
@@ -84,14 +85,15 @@ After starting both the backend and frontend servers, you can access the web app
 
 ## Backend
 
-The backend provides a REST API for LOREM IPSUM. Here are the available endpoints:
+The backend provides the following endpoints:
 
-    - GET /time - Get LOREM IPSUM
+    - GET /time - Get the most recently fetched server time in epoch seconds
     - GET /metrics - Get all Prometheus metrics
 
 ## Frontend
 
-The app provides the following features:
+The frontend provides the following features:
 
-    - View a LOREM IPSUM
-    - Update a LOREM IPSUM
+    - View recently fetched server time
+    - View difference between current and server time
+    - View Prometheus metrics

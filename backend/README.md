@@ -4,7 +4,7 @@ This README is specifically for backend-related tasks. For instructions on runni
 
 ## Scripts
 
-Below are the available scripts for the backend. Run these commands from the backend directory:
+Below are the available scripts for the backend. Run these commands from the `backend` directory:
 
 ### Start the Server
 
@@ -18,31 +18,13 @@ This will start the server at `http://localhost:3000` (or another port if config
 
 ### Development mode
 
-Start the server with automatic restarts on file changes using `nodemon`:
+Start the server with automatic restarts on file changes:
 
 ```bash
 npm run dev
 ```
 
-### Linting
-
-Linting helps enforce consistent code style and identify potential issues.
-
-To run the linter and check for code quality issues:
-
-```bash
-npm run lint
-```
-
-To automatically fix fixable issues:
-
-```bash
-npm run lint:fix
-```
-
 ### Testing
-
-This project uses Jest for testing.
 
 To run all tests:
 
@@ -54,4 +36,18 @@ To run tests in watch mode (automatically re-runs tests on file changes):
 
 ```bash
 npm run test:watch
+```
+
+### Linting
+
+Run ESLint to identify code quality and style issues:
+
+```bash
+npm run lint
+```
+
+To automatically fix fixable issues:
+
+```bash
+npm run lint:fix
 ```
